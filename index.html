@@ -5,7 +5,7 @@
     window.onload = function() {
       const params = new URLSearchParams(window.location.search)
       if (params.has('userid') && params.has('code')){
-        let url = `peployalty://pepsicoloyaltyapp.link?code=${params.get('userid')}&userid=${params.get('code')}`
+        let url = `peployalty://pepsicoloyaltyapp.link?code=${params.get('code')}&userid=${params.get('userid')}`
         window.location.replace(url)
       }
   }
