@@ -4,8 +4,8 @@
   <script>
     window.onload = function() {
       const params = new URLSearchParams(window.location.search)
-      if (params.has('userid') && params.has('code')){
-        let url = `peployalty://pepsicoloyaltyapp.link?code=${params.get('code')}&userid=${params.get('userid')}`
+      if (params.has('userId') && params.has('code')){
+        let url = `peployalty://pepsicoloyaltyapp.link?code=${params.get('code')}&userid=${params.get('userId')}`
         window.location.replace(url)
       }
   }
