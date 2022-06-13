@@ -12,8 +12,8 @@
         let url = `peployalty://pepsicoloyaltyapp.link?code=${lowerCaseParams.get('code')}&userid=${lowerCaseParams.get('userid')}`
         window.location.replace(url)
       }
-      if (lowerCaseParams.has('userid') && lowerCaseParams.has('recoverytoken')){
-        let url = `peployalty://pepsicoloyaltyapp.link?recoveryToken=${lowerCaseParams.get('recoverytoken')}&userid=${lowerCaseParams.get('userid')}`
+      if (lowerCaseParams.has('userid') && lowerCaseParams.has('recoverytoken') && lowerCaseParams.has('code')){
+        let url = `peployalty://pepsicoloyaltyapp.link?code=${lowerCaseParams.get('code')}&recoveryToken=${lowerCaseParams.get('recoverytoken')}&userid=${lowerCaseParams.get('userid')}`
         window.location.replace(url)
       }
   }
