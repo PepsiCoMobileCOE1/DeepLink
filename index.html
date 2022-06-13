@@ -4,8 +4,16 @@
   <script>
     window.onload = function() {
       const params = new URLSearchParams(window.location.search)
-      if (params.has('userId') && params.has('code')){
-        let url = `peployalty://pepsicoloyaltyapp.link?code=${params.get('code')}&userid=${params.get('userId')}`
+      const lowerCaseParams = new URLSearchParams()
+      for (const [name, value] of params) {
+        lowerCaseParams.append(name.toLowerCase().trim(), value);
+      }
+      if (lowerCaseParams.has('userid') && lowerCaseParams.has('code')){
+        let url = `peployalty://pepsicoloyaltyapp.link?code=${lowerCaseParams.get('code')}&userid=${lowerCaseParams.get('userid')}`
+        window.location.replace(url)
+      }
+      if (lowerCaseParams.has('userid') && lowerCaseParams.has('recoverytoken')){
+        let url = `peployalty://pepsicoloyaltyapp.link?recoveryToken=${lowerCaseParams.get('recoverytoken')}&userid=${lowerCaseParams.get('userid')}`
         window.location.replace(url)
       }
   }
